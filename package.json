@@ -15,7 +15,8 @@
     "@sap/cds-dk": "^7"
   },
   "scripts": {
-    "start": "cds-serve"
+    "prestart": "cd app/my-app && npm install && npm run build && cp -R dist/* ../app-ui",
+    "start": "cds run"
   },
   "cds": {
     "requires": {
